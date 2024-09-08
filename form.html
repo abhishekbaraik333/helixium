@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Devis - Helixium Cinematic</title>
+    <link rel="shortcut icon" href="logoonglet.png" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: 'Akira';
+            src: url('fonts/akira.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'WalkwayBlack';
+            src: url('fonts/WalkwayBlack.ttf') format('truetype');
+        }
+
+        * {
+            letter-spacing: 3px;
+        }
+
+        #devis-form {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'WalkwayBlack', Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            margin: 0;
+            font-family: 'Akira', Arial, sans-serif;
+            letter-spacing: 0px;
+        }
+
+        nav {
+            user-select: none;
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #333;
+            width: 100%;
+            max-width: 200px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links {
+            user-select: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: none;
+        }
+
+        .nav-links li {
+            user-select: none;
+            border-bottom: 1px solid #575757;
+        }
+
+        .nav-links li:last-child {
+            user-select: none;
+            border-bottom: none;
+        }
+
+        .nav-links a {
+            user-select: none;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            user-select: none;
+            background: rgba(92, 92, 92, 0.3);
+        }
+
+        .menu-icon {
+            user-select: none;
+            display: block;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (min-width: 600px) {
+            main {
+                background-image: url('img2.JPG');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .menu-icon {
+                display: none;
+            }
+
+            nav {
+                display: flex;
+                position: static;
+                background-color: transparent;
+                box-shadow: none;
+                max-width: none;
+                width: auto;
+                align-items: center;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                border: none;
+            }
+
+            .nav-links a {
+                padding: 10px 0;
+                transition: color 0.3s;
+                background-color: black;
+            }
+
+            .nav-links a:hover {
+                padding: 10px 0;
+                color: rgb(202, 202, 202);
+                background-color: black;
+            }
+
+            .nav-links li {
+                user-select: none;
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 599px) {
+            main {
+                background-image: url('img1.JPG');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'WalkwayBlack', Arial, sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            text-align: left;
+            font-size: 16px;
+        }
+
+        input, textarea, select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #575757;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #777;
+        }
+
+        .back-arrow {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("fKgfCgNX5mPIWPnku"); // Remplacez par votre USER ID de EmailJS
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Helixium</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="offres.html">Offres</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                ☰
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>FORMULAIRE</h2>
+        <form id="devis-form">
+            <label for="offer">Offre sélectionnée :</label>
+            <select id="offer" name="offer">
+                <option value="Abonnement">Abonnement</option>
+                <option value="PACK ONE PUB">Pack One Pub</option>
+                <option value="Pack Prenium Pub Company">Pack Prenium Pub Company</option>
+                <option value="Docu-Pro">Docu-Pro</option>
+            </select>
+
+            <label for="company-name">Nom de l'entreprise :</label>
+            <input type="text" id="company_name" name="company_name" required pattern="[A-Za-z\s]+" title="Seulement des lettres et des espaces sont autorisés">
+
+            <label for="contact-name">Nom du contact :</label>
+            <input type="text" id="contact_name" name="contact_name" required pattern="[A-Za-z\s]+" title="Seulement des lettres et des espaces sont autorisés">
+
+            <label for="email">Adresse email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Numéro de téléphone :</label>
+            <input type="tel" id="phone" name="phone" required pattern="\d{10}" title="Entrez un numéro de téléphone valide à 10 chiffres">
+
+            <label for="website">Site web (si applicable) :</label>
+            <input type="url" id="website" name="website">
+
+            <label for="project-description">Description du projet :</label>
+            <textarea id="project_description" name="project_description" required></textarea>
+
+            <label for="campaign-goals">Objectifs de la campagne :</label>
+            <textarea id="campaign_goals" name="campaign_goals" required></textarea>
+
+            <label for="target-audience">Public cible :</label>
+            <textarea id="target_audience" name="target_audience" required></textarea>
+
+            <label for="budget">Budget approximatif :</label>
+            <input type="number" id="budget" name="budget" required>
+
+            <label for="start-date">Date de début souhaitée :</label>
+            <input type="date" id="start_date" name="start_date" required>
+
+            <label for="end-date">Date de fin souhaitée :</label>
+            <input type="date" id="end_date" name="end_date" required>
+
+            <label for="references">Références ou inspirations :</label>
+            <textarea id="references" name="references"></textarea>
+
+            <label for="additional-comments">Commentaires ou exigences supplémentaires :</label>
+            <textarea id="additional_comments" name="additional_comments"></textarea>
+
+            <button type="submit" class="btn">Soumettre Projet</button>
+        </form>
+    </main>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'block';
+            }
+        }
+
+        document.getElementById('devis-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const form = document.getElementById('devis-form');
+
+            // Collecte des données du formulaire
+            const templateParams = {
+                offer: form.offer.value,
+                company_name: form.company_name.value,
+                contact_name: form.contact_name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                website: form.website.value,
+                project_description: form.project_description.value,
+                campaign_goals: form.campaign_goals.value,
+                target_audience: form.target_audience.value,
+                budget: form.budget.value,
+                start_date: form.start_date.value,
+                end_date: form.end_date.value,
+                references: form.references.value,
+                additional_comments: form.additional_comments.value
+            };
+
+            // Envoi de l'email avec EmailJS
+            emailjs.send('service_7gwouv5', 'template_3id4j7q', templateParams)
+                .then(function(response) {
+                    alert('Projet soumis avec succès, merci pour votre commande !');
+                    form.reset();
+                }, function(error) {
+                    console.error('Error:', error);
+                    alert('Une erreur est survenue lors de la soumission du projet');
+                });
+        });
+    </script>
+</body>
+</html>

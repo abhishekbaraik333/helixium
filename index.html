@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helixium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="relative">
+    <header class="flex justify-between absolute z-10 top-0 w-full items-center py-2 px-4 lg:px-16 bg-transparent">
+        <h1 class="logo-title text-white text-2xl lg:text-6xl">HELIXIUM</h1>
+
+        <!-- desktop navbar -->
+        <nav class="desktop-menu hidden lg:flex gap-5 items-center text-white">
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">ACCUEIL</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">OFFRES</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">HISTOIRE</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">IMAGES</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">PARTENARIAT</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">ESPACE CLIENT</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">CONTACT</a>
+
+            <i class="fa-solid fa-user scale-[2] ml-5"></i>
+        </nav>
+
+        <button id="hamburger" class="lg:hidden mr-4 flex flex-col gap-1.5 relative z-[100]">
+            <span class="w-6 h-0.5 bg-white transition-all opacity-40 duration-300"></span>
+            <span class="w-6 h-0.5 bg-white transition-all opacity-40 duration-300"></span>
+            <span class="w-6 h-0.5 bg-white transition-all opacity-40 duration-300"></span>
+        </button>
+
+        <!-- mobile navbar -->
+        <nav id="mobile-nav"
+            class="glass-nav fixed z-[99] inset-x-0 top-10 right-0 w-1/2 bg-black text-white -translate-x-[100%] transition-transform duration-300 lg:hidden flex flex-col px-3 gap-1 py-6 lg:gap-5 justify-center items-end text-2xl text-secondary lg:text-lg">
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">ACCUEIL</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">OFFRES</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">HISTOIRE</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">IMAGES</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">PARTENARIAT</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">ESPACE CLIENT</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">CONTACT</a>
+        </nav>
+
+
+    </header>
+
+    <section class="hero-section hidden lg:block bg-black h-[100vh] w-full">
+        <div class="slider-container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/_DSC7626.JPG" alt="Slide 1"></div>
+                    <div class="swiper-slide"><img src="./assets/_DSC7630.JPG" alt="Slide 2"></div>
+                    <div class="swiper-slide"><img src="./assets/_DSC7638.JPG" alt="Slide 3"></div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="static-text">
+                <div>
+                    <h2 class="hero-title text-3xl lg:text-6xl font-bold text-zinc-300 lg:text-nowrap">BIENVENUE CHEZ
+                        HELIXIUM </h2>
+                    <h3 class="hero-subtitle lg:text-4xl font-bold">La Production a votre image!</h3>
+                </div>
+                <div class="buttons-container lg:hidden mt-8  lg:mt-16">
+                    <div class="flex-col flex lg:flex-row gap-5 justify-center">
+                        <a href="" class="glass-button">Nos Offres</a>
+                        <a href="" class="glass-button">Nos Images</a>
+                        <a href="" class="glass-button">Partenariat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="hero-section lg:hidden bg-black h-[100vh] w-full">
+        <div class="slider-container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/_DSC7625.JPG" alt="Slide 1"></div>
+                    <div class="swiper-slide"><img src="./assets/_DSC7629.JPG" alt="Slide 2"></div>
+                    <div class="swiper-slide"><img src="./assets/_DSC7639.JPG" alt="Slide 3"></div>
+                </div>
+            </div>
+
+            <div class="static-text">
+                <div>
+                    <h2 class="hero-title text-3xl lg:text-6xl font-bold text-zinc-300 lg:text-nowrap">BIENVENUE CHEZ
+                        HELIXIUM </h2>
+                    <h3 class="hero-subtitle lg:text-4xl font-bold">La Production a votre image!</h3>
+                </div>
+                <div class="buttons-container lg:hidden mt-8  lg:mt-16">
+                    <div class="flex-col flex lg:flex-row gap-5 justify-center">
+                        <a href="" class="glass-button">Nos Offres</a>
+                        <a href="" class="glass-button">Nos Images</a>
+                        <a href="" class="glass-button">Partenariat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="catalogue-section bg-black py-10 w-full">
+        <div class="flex justify-center">
+            <h2 class="hero-title text-3xl lg:text-6xl font-bold text-zinc-500 text-nowrap">catalogue</h2>
+        </div>
+        <div class="px-[5%] flex-col flex lg:flex-row justify-center gap-5 lg:gap-10 mt-10">
+
+            <div class="flex flex-col gap-5">
+                <div class="glass-card lg:max-w-[600px] p-6 rounded-md relative">
+                    <div class="max-w-[70%]">
+                        <h3 class="text-base lg:text-xl card-title">ONE PUB</h3>
+                        <p class="mt-2 text-sm md:text-base">
+                            Une publicite d’exception realisee avec des
+                            sets de materiel cinema. Le pack inclut une
+                            reunion d’ecriture, ainsi qu'une a deux
+                            journees de tournage, plus
+                            montage/etalonnage.
+                        </p>
+                    </div>
+                    <a href="./form.html"
+                        class="demander text-xs bg-white px-2 py-3 absolute top-4 right-4 text-black font-semibold rounded-md hover:opacity-80">
+                        DEMANDER
+                    </a>
+                    <p class=" text-lg md:text-3xl text-red-600 font-bold absolute bottom-4 right-4">
+                        1000~1900€
+                    </p>
+                </div>
+
+                <div class="glass-card lg:max-w-[600px]  p-6 rounded-md relative">
+                    <div class="max-w-[70%]">
+                        <h3 class="text-base lg:text-xl card-title">PRENIUM PACK</h3>
+                        <p class="mt-2 text-sm md:text-base">
+                            4 publicites d'exception realisees avec des sets de materiel cinema. Le pack inclut une
+                            reunion d'ecriture par publicite, ainsi qu'une a deux journess de tournage par production,
+                            plus montage/etalonnage
+                        </p>
+                    </div>
+                    <a href="./form.html"
+                        class="demander text-xs bg-white px-2 py-3 absolute top-4 right-4 text-black font-semibold rounded-md hover:opacity-80">
+                        DEMANDER
+                    </a>
+                    <p class=" text-lg md:text-3xl text-red-600 font-bold absolute bottom-4 right-4">
+                        3900~7100€
+                    </p>
+                </div>
+
+                <div class="glass-card lg:max-w-[600px]  p-6 rounded-md relative">
+                    <div class="max-w-[70%]">
+                        <h3 class="text-base lg:text-xl card-title">DOCU- PRO</h3>
+                        <p class="mt-2 text-sm md:text-base">
+                            Le projet cinematographique de tre
+                            choix , entre 7 et 50 min u tes de film. La
+                            seule limite est votre imagination
+                        </p>
+                    </div>
+                    <a href="./form.html"
+                        class="demander text-xs bg-white px-2 py-3 absolute top-4 right-4 text-black font-semibold rounded-md hover:opacity-80">
+                        DEMANDER
+                    </a>
+                    <p class=" text-lg md:text-3xl text-red-600 font-bold absolute bottom-4 right-4">
+                        Sur DEVIS
+                    </p>
+                </div>
+
+                <div class="glass-card lg:max-w-[600px]  p-6 rounded-md relative">
+                    <div class="max-w-[70%]">
+                        <h3 class="text-base lg:text-xl card-title">ONE CLIP</h3>
+                        <p class="mt-2 text-sm md:text-base">
+                            Le projet Clip musical de votre choix , entre
+                            2 et 7 minutes de film.
+                            scénarisation/ créativité/ optimisation
+                        </p>
+                    </div>
+                    <a href="./form.html"
+                        class="demander text-xs bg-white px-2 py-3 absolute top-4 right-4 text-black font-semibold rounded-md hover:opacity-80">
+                        DEMANDER
+                    </a>
+                    <p class=" text-lg md:text-3xl text-red-600 font-bold absolute bottom-4 right-4">
+                        Sur DEVIS
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <div class="glass-card lg:max-w-[600px] p-6 rounded-md relative">
+                    <div class="max-w-[70%]">
+                        <h3 class="text-base lg:text-xl card-title">ABONNEMENT CONTENT</h3>
+                        <p class="mt-2 text-sm md:text-base">
+                            7 formatscourts Portrait realises avec du
+                            materiel professionnel. Une journee de
+                            tournage sera necessaire pour les 7 videos
+                            (engagement de 3 mois).
+                        </p>
+                    </div>
+                    <a href="./form.html"
+                        class="demander text-xs bg-white px-2 py-3 absolute top-4 right-4 text-black font-semibold rounded-md hover:opacity-80">
+                        DEMANDER
+                    </a>
+                    <p class=" text-lg md:text-3xl text-red-600 font-bold absolute bottom-4 right-4">
+                        Sur DEVIS
+                    </p>
+                </div>
+
+                <div class="glass-card lg:max-w-[600px]  p-6 rounded-md relative">
+                    <div class="max-w-[70%]">
+                        <h3 class="text-base lg:text-xl card-title">ABONNEMENT PRO-PUB
+                        </h3>
+                        <p class="mt-2 text-sm md:text-base">
+                            4 publicites d’exception realisees avec des sets
+                            de materiel cinema. Le pack inclut une reunion
+                            d’ecriture par publicite, ainsi qu'une a deux
+                            journees de tournage par production, plus
+                            montage/etalonnage.(VERSION MENSUEL)
+                        </p>
+                    </div>
+                    <a href="./form.html"
+                        class="demander text-xs bg-white px-2 py-3 absolute top-4 right-4 text-black font-semibold rounded-md hover:opacity-80">
+                        DEMANDER
+                    </a>
+                    <p class=" text-lg md:text-3xl text-red-600 font-bold absolute bottom-4 right-4">
+                        Sur Devis
+                    </p>
+                </div>
+
+                <div class="glass-card lg:max-w-[600px]  p-6 rounded-md relative">
+                    <div class="max-w-[70%]">
+                        <h3 class="text-base lg:text-xl card-title">ABONNEMENT LAST</h3>
+                        <p class="mt-2 text-sm md:text-base">
+                            Le last est la version la plus aboutie de
+                            l’abonnement a de la production de publicité
+                            d’exception, jusqu'à 10 publicité par mois
+                            avec accompagnement personnalité pour
+                            favoris à 100% votre expérience client.
+                        </p>
+                    </div>
+                    <a href="./form.html"
+                        class="demander text-xs bg-white px-2 py-3 absolute top-4 right-4 text-black font-semibold rounded-md hover:opacity-80">
+                        DEMANDER
+                    </a>
+                    <p class=" text-lg md:text-3xl text-red-600 font-bold absolute bottom-4 right-4">
+                        Sur DEVIS
+                    </p>
+                </div>
+
+                <div class="glass-card lg:max-w-[600px]  p-6 rounded-md relative">
+                    <div class="max-w-[70%]">
+                        <h3 class="text-base lg:text-xl card-title">DEVIS PERSONNALISE</h3>
+                        <p class="mt-2 text-sm md:text-base">
+                            Remplir le formulaire de proposition de
+                            projet personnalisé.
+                            Objectif répondre a vos demandes les plus
+                            aiguisés.
+                        </p>
+                    </div>
+                    <a href="./form.html"
+                        class="demander text-xs bg-white px-2 py-3 absolute top-4 right-4 text-black font-semibold rounded-md hover:opacity-80">
+                        DEMANDER
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-800 text-center p-4 text-white text-lg">
+        © Droits réservés Helixium.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

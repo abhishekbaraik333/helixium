@@ -1,0 +1,149 @@
+@font-face {
+  font-family: horizon;
+  src: url(./fonts/horizon.otf);
+}
+
+@font-face {
+  font-family: horizon-outline;
+  src: url(./fonts/horizon_outlined.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white ;
+    font-family: "Roboto", sans-serif;
+    }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-title{
+    font-family: "horizon",sans-serif;
+  }
+  
+  #hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  #hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  #mobile-nav.active {
+    transform: translateX(100%);
+  }
+
+  .glass-nav{
+    background: rgba(0, 0, 0, 0.5);  
+    border-radius: 5px;
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .static-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .swiper-pagination-bullet{
+    background: #fff;
+    scale: 1.2;
+  }
+
+  .hero-title{
+    font-family: "horizon-outline",sans-serif;
+  }
+  
+  .hero-subtitle{
+    color: white; /* Text color */
+    text-shadow: 0 0 10px white; /* First layer of glow */
+  }
+
+  .buttons-container{
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);  
+    border-radius: 5px;
+    backdrop-filter: blur(5px); 
+  }
+
+  .glass-button{
+    text-transform: uppercase;
+    font-family: "horizon",sans-serif;
+    padding: 15px 30px;
+    font-size: 24px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);  
+    border-radius: 5px;
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .catalogue-section{
+    background: url(./assets/_DSC7630.JPG) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card-title{
+    font-family: "horizon",sans-serif;
+    font-weight: 200;
+  }
+
+  
+
+  .glass-card{
+    background: rgba(255, 255, 255, 0.1);  
+    border-radius: 5px;
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  }
+
+  @media (max-width:1024px) {
+    .glass-button{
+      width: 100%;
+      font-size: 12px;
+    }
+    .static-text{
+      width: 100%;
+      padding: 0 5%;
+    }
+    .catalogue-section{
+      background: url(./assets/_DSC7639.JPG) center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
+
+  }
