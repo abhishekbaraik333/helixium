@@ -9,195 +9,234 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white ;
-    font-family: "Roboto", sans-serif;
-    }
-  
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
 
-  .logo-title{
-    font-family: "horizon",sans-serif;
-  }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
-  .glass-nav{
-    background: rgba(0, 0, 0, 0.5);  
-    border-radius: 5px;
-    backdrop-filter: blur(5px); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-  }
-  
-  #hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-  
-  #hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  #hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  #mobile-nav.active {
-    transform: translateX(100%);
-  }
+.logo-title {
+  font-family: "horizon", sans-serif;
+}
 
-  .slider-container {
-    position: relative;
+.glass-nav {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#mobile-nav.active {
+  transform: translateX(100%);
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.static-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+  scale: 1.2;
+}
+
+.hero-title {
+  font-family: "horizon-outline", sans-serif;
+  color: white;
+}
+
+.hero-subtitle {
+  color: white; /* Text color */
+  text-shadow: 0 0 10px white; /* First layer of glow */
+}
+
+.buttons-container {
+  padding: 20px;
+  background: transparent;
+  border-radius: 5px;
+  /* backdrop-filter: blur(5px);  */
+}
+
+.glass-button {
+  text-transform: uppercase;
+  font-family: "horizon", sans-serif;
+  padding: 15px 30px;
+  font-size: 14px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.catalogue-section {
+  background: url(./assets/_DSC7630.JPG) center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-title {
+  font-family: "horizon", sans-serif;
+  font-weight: 200;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .glass-button {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    font-size: 12px;
   }
-  
-  .swiper-container {
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
   .static-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 1;
+    width: 100%;
+    padding: 0 5%;
+  }
+  .catalogue-section {
+    background: url(./assets/_DSC7639.JPG) center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  .swiper-pagination-bullet{
-    background: #fff;
-    scale: 1.2;
-  }
-
-  .hero-title{
-    font-family: "horizon-outline",sans-serif;
-    color: white;
-  }
-  
-  .hero-subtitle{
-    color: white; /* Text color */
-    text-shadow: 0 0 10px white; /* First layer of glow */
-  }
-
-  .buttons-container{
+  .buttons-container {
     padding: 20px;
-    background: transparent;  
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-    /* backdrop-filter: blur(5px);  */
-  }
-
-  .glass-button{
-    text-transform: uppercase;
-    font-family: "horizon",sans-serif;
-    padding: 15px 30px;
-    font-size: 14px;
-    color: white;
-    background: rgba(255, 255, 255, 0.1);  
-    border-radius: 5px;
-    backdrop-filter: blur(5px); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .catalogue-section{
-    background: url(./assets/_DSC7630.JPG) center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .card-title{
-    font-family: "horizon",sans-serif;
-    font-weight: 200;
-  }
-
-  
-
-  .glass-card{
-    background: rgba(255, 255, 255, 0.1);  
-    border-radius: 5px;
-    backdrop-filter: blur(5px); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-  }
-
-  @media (max-width:1024px) {
-    .glass-button{
-      width: 100%;
-      font-size: 12px;
-    }
-    .static-text{
-      width: 100%;
-      padding: 0 5%;
-    }
-    .catalogue-section{
-      background: url(./assets/_DSC7639.JPG) center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .buttons-container{
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.3);  
-      border-radius: 5px;
-      backdrop-filter: blur(5px); 
-    }
-    .logo-title{
-      font-family: "horizon-outline",sans-serif;
-    }
-    .hero-title{
-      font-family: "horizon",sans-serif;
-      text-shadow: 0 0 20px white; /* First layer of glow */
-    }
-    .hero-subtitle{
-      text-shadow: 0 0 0px white; /* First layer of glow */
-    }
-  }
-
-  /* Histoire */
-
-  .histoire-section{
-    background-image: url(./assets/_DSC7630.JPG);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .offres-btn{
-    padding: 20px 40px;
-    background: rgba(255, 255, 255, 0.1);  
     backdrop-filter: blur(5px);
   }
+  .logo-title {
+    font-family: "horizon-outline", sans-serif;
+  }
+  .hero-title {
+    font-family: "horizon", sans-serif;
+    text-shadow: 0 0 20px white; /* First layer of glow */
+  }
+  .hero-subtitle {
+    text-shadow: 0 0 0px white; /* First layer of glow */
+  }
+}
 
-  .histoire-h{
-    font-weight: 700;
-    font-size: 42px;
-    font-family: "horizon-outline",sans-serif;
+/* Histoire */
+
+.histoire-section {
+  background-image: url(./assets/_DSC7630.JPG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.offres-btn {
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.histoire-h {
+  font-weight: 700;
+  font-size: 42px;
+  font-family: "horizon-outline", sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .histoire-section {
+    background-image: url(./assets/_DSC7629.JPG);
   }
 
-  @media (max-width:1024px) {
-    .histoire-section{
-      background-image: url(./assets/_DSC7629.JPG);
-    }
+  .histoire-h {
+    font-size: 20px;
+    font-family: "horizon", sans-serif;
+    text-shadow: 0 0 10px white; /* First layer of glow */
+  }
+  .offres-btn {
+    padding: 10px 30px;
+  }
+}
 
-    .histoire-h{
-      font-size: 20px;
-      font-family: "horizon",sans-serif;
-      text-shadow: 0 0 10px white; /* First layer of glow */
-    }
-    .offres-btn{
-      padding: 10px 30px;
-    }
+/* histoire end */
+
+/* contact */
+
+.contact-section {
+  background-image: url(./assets/_DSC7626.JPG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-text {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+@media (max-width: 1024px) {
+  .contact-section {
+    background-image: url(./assets/_DSC7625.JPG);
   }
 
-  /* histoire end */
+  .contact-text {
+    font-size: 18px;
+  }
+}
+
+/* images section */
+
+.images-section {
+  background-image: url(./assets/_DSC7638.JPG);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+@media (max-width: 1024px) {
+  .images-section {
+    background-image: url(./assets/_DSC7639.JPG);
+  }
+
+}

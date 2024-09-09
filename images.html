@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <header class="flex justify-between h-[10vh] z-10  w-full items-center py-2 px-4 lg:px-16 bg-black">
+        <a href="./index.html">
+            <h1 class="logo-title text-white text-3xl lg:text-5xl font-bold">HELIXIUM</h1>
+        </a>
+
+        <!-- desktop navbar -->
+        <nav class="desktop-menu hidden lg:flex gap-5 items-center text-white">
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="./index.html">ACCUEIL</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">OFFRES</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="./histoire.html">HISTOIRE</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="./images.html">IMAGES</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">PARTENARIAT</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">ESPACE CLIENT</a>
+            <div class="divider h-[1.6rem] w-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="# ">CONTACT</a>
+
+            <i class="fa-solid fa-user scale-[2] ml-5 hover:text-primary duration-300 ease"></i>
+        </nav>
+
+        <div class="flex items-center gap-5 lg:hidden">
+            <i class="fa-solid fa-user scale-[1.2] ml-5 hover:text-primary duration-300 ease"></i>
+
+
+            <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 relative z-[100]">
+                <span class="w-6 h-1 bg-white transition-all  duration-300"></span>
+                <span class="w-4 h-1 bg-white transition-all  duration-300"></span>
+                <span class="w-6 h-1 bg-white transition-all  duration-300"></span>
+            </button>
+        </div>
+
+
+        <!-- mobile navbar -->
+        <nav id="mobile-nav"
+            class="glass-nav fixed z-[99] inset-x-0 top-10 right-0 w-1/2 text-white -translate-x-[100%] transition-transform duration-300 lg:hidden flex flex-col px-3 gap-1 py-6 lg:gap-5 justify-center items-end text-2xl text-secondary lg:text-lg">
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="./index.html">ACCUEIL</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">OFFRES</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="./histoire.html">HISTOIRE</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="./images.html">IMAGES</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">PARTENARIAT</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">ESPACE CLIENT</a>
+            <div class="divider lg:h-[1.6rem] lg:w-[5px] w-full h-[5px] bg-zinc-200"></div>
+            <a class="hover:text-primary duration-300 ease text-base font-bold" href="#">CONTACT</a>
+        </nav>
+
+    </header>
+
+    <section class="images-section lg:h-[83vh] py-5">
+        <div class="flex h-full flex-col-reverse lg:flex-row px-[4%]">
+            <div class="lg:w-1/2 mt-10">
+                <h4 class=" lg:text-xl font-semibold mb-3">
+                    NOTRE HISTOIRE:
+                </h4>
+                <p class="font-normal text-xs lg:text-base w-2/3 lg:w-2/3">
+                    Helixium est une entreprise de production de
+                    publicité et de documentaire innovante fondé dans
+                    l’optique de rendre abordable a tout type d’entreprise
+                    la production de contenue de hautes qualité shooté
+                    avec du matériel de cinéma.
+                    <br> <br>
+                    Cela en démultipliant les couts de production en
+                    privilégiant la Simplicité et la qualité avec des
+                    équipes de productions réduites tout en gardant du
+                    matériel de standard cinéma.
+                </p>
+                <div class="w-2/3 mt-3 lg:w-2/3 h-1 lg:h-[5px] bg-zinc-200 lg:hidden"></div>
+
+                <a href="#">
+                    <button class="offres-btn text-sm lg:text-xl mt-4 mb-4 rounded-md hover:opacity-90">Découvrez nos offres</button>
+                </a>
+                <div class="flex justify-end lg:justify-start">
+                <div class="mt-5 flex flex-col">
+                    <div class="w-full mb-3 lg:w-2/3 h-1 lg:h-[5px] bg-zinc-200 lg:hidden"></div>
+
+                    <h4 class="lg:text-xl font-semibold"> INNOVATION MAJEUR :</h4>
+                    <ul class="mt-4 text-sm lg:text-lg font-semibold">
+                        <li>
+                            . Formulaire de description de projets aiguisé
+                        </li>
+                        <li>
+                            . Utilisation de matériel cinéma
+                        </li>
+                        <li>
+                            . Sécurité et accessibilité par la plateforme
+                        </li>
+                        <li>
+                            . Espace Client personnalisé
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="lg:w-1/2 flex flex-col gap-4 items-center lg:justify-end lg:items-end">
+                <div class="w-1/2 lg:w-2/3 h-1 lg:h-[5px] bg-zinc-200"></div>
+
+                <h2 class="histoire-h">
+                    IMAGES
+                </h2>
+                <div class="w-1/2 lg:w-2/3 h-1 lg:h-[5px] bg-zinc-200"></div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer class="bg-zinc-800 h-[7vh] text-center flex justify-center items-center text-white lg:text-lg">
+        © Droits réservés Helixium.
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

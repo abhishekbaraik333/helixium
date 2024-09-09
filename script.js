@@ -17,3 +17,14 @@ const swiper = new Swiper('.swiper-container', {
     clickable: true, // Allows bullets to be clicked
   },
 });
+
+const swiper2 = new Swiper('.swiper-container2', {
+  loop: true, // Loop the slides
+  autoplay: {
+    delay: 2000,
+  },
+  pagination: {
+    el: '.swiper-pagination2',
+    clickable: true, // Allows bullets to be clicked
+  },
+});
