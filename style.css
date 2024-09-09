@@ -84,6 +84,7 @@
 
   .hero-title{
     font-family: "horizon-outline",sans-serif;
+    color: white;
   }
   
   .hero-subtitle{
@@ -93,16 +94,16 @@
 
   .buttons-container{
     padding: 20px;
-    background: rgba(0, 0, 0, 0.3);  
+    background: transparent;  
     border-radius: 5px;
-    backdrop-filter: blur(5px); 
+    /* backdrop-filter: blur(5px);  */
   }
 
   .glass-button{
     text-transform: uppercase;
     font-family: "horizon",sans-serif;
     padding: 15px 30px;
-    font-size: 24px;
+    font-size: 14px;
     color: white;
     background: rgba(255, 255, 255, 0.1);  
     border-radius: 5px;
@@ -144,6 +145,22 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-  
+
+    .buttons-container{
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);  
+      border-radius: 5px;
+      backdrop-filter: blur(5px); 
+    }
+    .logo-title{
+      font-family: "horizon-outline",sans-serif;
+    }
+    .hero-title{
+      font-family: "horizon",sans-serif;
+      text-shadow: 0 0 20px white; /* First layer of glow */
+    }
+    .hero-subtitle{
+      text-shadow: 0 0 0px white; /* First layer of glow */
+    }
 
   }
