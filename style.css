@@ -162,5 +162,42 @@
     .hero-subtitle{
       text-shadow: 0 0 0px white; /* First layer of glow */
     }
-
   }
+
+  /* Histoire */
+
+  .histoire-section{
+    background-image: url(./assets/_DSC7630.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .offres-btn{
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.1);  
+    backdrop-filter: blur(5px);
+  }
+
+  .histoire-h{
+    font-weight: 700;
+    font-size: 42px;
+    font-family: "horizon-outline",sans-serif;
+  }
+
+  @media (max-width:1024px) {
+    .histoire-section{
+      background-image: url(./assets/_DSC7629.JPG);
+    }
+
+    .histoire-h{
+      font-size: 20px;
+      font-family: "horizon",sans-serif;
+      text-shadow: 0 0 10px white; /* First layer of glow */
+    }
+    .offres-btn{
+      padding: 10px 30px;
+    }
+  }
+
+  /* histoire end */
