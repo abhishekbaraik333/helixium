@@ -170,7 +170,7 @@ body {
     backdrop-filter: blur(5px);
   }
   .logo-title {
-    font-family: "horizon-outline", sans-serif;
+    font-family: "horizon", sans-serif;
     font-weight: 700 !important;
   }
 
@@ -186,7 +186,7 @@ body {
   .hero-subtitle {
     text-shadow: 0 0 0px white; /* First layer of glow */
   }
-  
+
 }
 
 /* Histoire */
