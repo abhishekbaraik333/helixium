@@ -173,14 +173,12 @@ body {
     backdrop-filter: blur(5px);
   }
   .logo-title {
-    font-family: "horizon-outline", sans-serif;
+    font-family: "horizon", sans-serif;
     font-weight: 700 !important;
   }
 
   .hero-title {
-    font-family: "horizon", sans-serif;
-    text-shadow: 0 0 2px white;
-    -webkit-text-shadow: 0 0 2px white;
+    font-family: "horizon-outline", sans-serif;
     transform: translateZ(0);
     /* Will-change to optimize performance */
     will-change: transform;
