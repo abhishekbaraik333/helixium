@@ -159,6 +159,7 @@ body {
     width: 100%;
     padding: 0 5%;
   }
+
   .catalogue-section {
     background: url(./assets/_DSC7639.JPG) center;
     background-repeat: no-repeat;
@@ -178,8 +179,8 @@ body {
 
   .hero-title {
     font-family: "horizon", sans-serif;
-    text-shadow: 0 0 1px white;
-    -webkit-text-shadow: 0 0 1px white;
+    text-shadow: 0 0 2px white;
+    -webkit-text-shadow: 0 0 2px white;
     transform: translateZ(0);
     /* Will-change to optimize performance */
     will-change: transform;
