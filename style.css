@@ -152,6 +152,9 @@ body {
     width: 100%;
     font-size: 12px;
   }
+  .glass-card{
+    height: inherit;
+  }
   .static-text {
     width: 100%;
     padding: 0 5%;
