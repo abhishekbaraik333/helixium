@@ -276,7 +276,7 @@ body {
 
 @media (min-width: 541px) {
   .swiper-container4{
-    height: 50vh;
+    height: 55vh;
   }
   .slider-container4{
     height: 60vh;
@@ -285,7 +285,6 @@ body {
     width: 70%;
     margin: auto;
   }
-
 }
 
 
