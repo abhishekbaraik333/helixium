@@ -101,7 +101,8 @@ body {
 
 .hero-title {
   font-family: "horizon-outline", sans-serif;
-  color: white;
+  color: white !important;
+  font-weight: 900;
 }
 
 .hero-subtitle {
