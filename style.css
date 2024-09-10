@@ -176,7 +176,7 @@ body {
   }
   .hero-title {
     font-family: "horizon", sans-serif;
-    text-shadow: 0 0 7px white; /* First layer of glow */
+    text-shadow: 0 0 5px white; /* First layer of glow */
   }
   .hero-subtitle {
     text-shadow: 0 0 0px white; /* First layer of glow */
