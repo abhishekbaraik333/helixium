@@ -179,6 +179,7 @@ body {
 
   .hero-title {
     font-family: "horizon-outline", sans-serif;
+    font-weight: 900;
     transform: translateZ(0);
     /* Will-change to optimize performance */
     will-change: transform;
