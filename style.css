@@ -177,7 +177,7 @@ body {
   }
 
   .hero-title {
-    font-family: "horizon-outline", sans-serif;
+    font-family: "horizon", sans-serif;
     font-weight: 900;
     transform: translateZ(0);
     /* Will-change to optimize performance */
@@ -218,7 +218,6 @@ body {
   .histoire-h {
     font-size: 20px;
     font-family: "horizon", sans-serif;
-    text-shadow: 0 0 10px white; /* First layer of glow */
   }
   .offres-btn {
     padding: 10px 30px;
