@@ -28,3 +28,19 @@ const swiper2 = new Swiper('.swiper-container2', {
     clickable: true, // Allows bullets to be clicked
   },
 });
+
+const swiper3 = new Swiper('.swiper-container3', {
+  loop: true, // Loop the slides
+  pagination: {
+    el: '.swiper-pagination3',
+    clickable: true, // Allows bullets to be clicked
+  },
+});
+
+const swiper4 = new Swiper('.swiper-container4', {
+  loop: true, // Loop the slides
+  pagination: {
+    el: '.swiper-pagination4',
+    clickable: true, // Allows bullets to be clicked
+  },
+});
