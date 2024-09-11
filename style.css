@@ -241,6 +241,30 @@ body {
   font-size: 28px;
 }
 
+/* animation */
+
+.glass-card{
+  cursor: pointer;
+  /* transform: rotateY(-35deg) rotateX(15deg); */ 
+  transition: 0.7s;
+}
+
+.glass-card:hover{
+  transform: translateY(30px)  rotateY(-35deg) rotateX(15deg) scale(1.2);
+  z-index:3; 
+}
+
+.glass-button{
+  cursor: pointer;
+  transform: rotateY(-35deg) rotateX(15deg); 
+  transition: 0.7s;
+}
+
+.glass-button:hover{
+  transform:  scale(1.1);
+  z-index:3; 
+}
+
 @media (max-width: 1024px) {
   .contact-section {
     background-image: url(./assets/_DSC7625.JPG);
@@ -248,6 +272,14 @@ body {
 
   .contact-text {
     font-size: 18px;
+  }
+  .glass-button:hover{
+    transform: scale(1.05);
+  }
+  
+  .glass-card:hover{
+    transform: translateY(15px)  rotateY(-15deg) rotateX(7deg) scale(1.05);
+    z-index:3; 
   }
 }
 
@@ -277,6 +309,8 @@ body {
   height: 100vh;
 }
 
+
+
 @media (max-width: 540px) {
   .swiper-container4 {
     height: 50vh;
@@ -300,7 +334,9 @@ body {
     width: 70%;
     margin: auto;
   }
+  
 }
+
 
 @media (max-width: 1023px) {
   .images-section {
@@ -308,3 +344,5 @@ body {
     background-position: center;
   }
 }
+
+
