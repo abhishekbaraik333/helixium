@@ -394,3 +394,22 @@ ul li:hover{
 }
 
 
+/* footer */
+
+.title {
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.marquee-text{
+    white-space: nowrap;
+    opacity: 0.85;
+    animation: marquee 20s linear infinite; 
+}
+
+@keyframes marquee {
+  0%   { transform: translate(0%, 0); }
+  100% { transform: translate(-141.5vw, 0); }
+}
