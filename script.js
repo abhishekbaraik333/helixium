@@ -49,7 +49,7 @@ const swiper5 = new Swiper('.swiper-container5', {
   loop: true, // Loop the slides
   autoplay:true,
   autoplay: {
-    delay: 1000,
+    delay: 1500,
   },
   slidesPerView: 1, // Default to 1 slide on mobile
   spaceBetween: 10,
