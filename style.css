@@ -413,3 +413,9 @@ ul li:hover{
   0%   { transform: translate(0%, 0); }
   100% { transform: translate(-141.5vw, 0); }
 }
+
+@media (max-width: 640px) {
+ .marquee-text{
+  animation: marquee 10s linear infinite; 
+ }
+}
