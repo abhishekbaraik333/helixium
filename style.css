@@ -192,7 +192,7 @@ body {
   font-style: normal;
   text-wrap: nowrap;
   font-size: 12px;
-  padding: 10px 25px;
+  padding: 8px 20px;
   border-radius: 1000px;
   border: none;
   background-color: #000;
@@ -301,6 +301,9 @@ body {
   .modern-button{
     padding: 10px 40px;
     font-size: 12px;
+  }
+  .modern-button2{
+    font-size: 10px;
   }
 }
 
