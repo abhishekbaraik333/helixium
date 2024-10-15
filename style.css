@@ -201,6 +201,11 @@ body {
   /* box-shadow: 2px 2px 3px #000000b4; */
 }
 
+.price-text{
+  font-family: "Questrial", sans-serif;
+
+}
+
 .container2 {
   position: relative;
   padding: 3px;
